@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Klik pada bagian atau area gambar sesuai dengan koordinat map yang telah ditentukan</p>
+    <img src="assets/p.jpg" alt="test" width="145px" height="126px" usemap="#picturemap">
+    <map name="picturemap">
+        <area shape="rect" coords="0,0,82,126" href="Latihan1.html" alt="bagianA">
+        <area shape="circle" coords="90,58,3" href="Latihan2.html" alt="bagianB">
+        <area shape="circle" coords="124,58,8" href="relion.html" alt="bagianC">
+    </map>
+    <video src="assets/fn.mp4" controls style="width: 50%;">Video not supported</video>
+    <embed src="assets/sond.mp3" loop="true" autoplay="false" width="145" height="60"></embed>
+
+    <div style="text-align:center">
+    <button onclick="tekanPause()">Play/Pause</button>
+    <button onclick="menjadiBig()">Big</button>
+    <button onclick="menjadiSmall()">Small</button>
+    <button onclick="menjadiNormal()">Normal</button>
+    <br><br>
+    <video id="videoku" width="430">
+        <source src="assets/fn.mp4" type="video/mp4">
+        Browser anda tidak support video HTML 5.
+    </video>
+    </div>
+
+    <script>
+        var VideoAku = document.getElementById("videoku");
+        function tekanPause() {
+        if (VideoAku.paused)
+        VideoAku.play();
+        else
+        VideoAku.pause();
+        }
+        function menjadiBig() {
+        VideoAku.width = 560;
+        }
+        function menjadiSmall() {
+        VideoAku.width = 320;
+        }
+        function menjadiNormal() {
+        VideoAku.width = 430;
+        }
+    </script>
+
+</body>
+</html>
